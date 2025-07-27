@@ -1,0 +1,252 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Pagination metadata"""
+type PaginationInfoDTO {
+  """Trang hiện tại"""
+  currentPage: Float!
+
+  """Số items per page"""
+  limit: Float!
+
+  """Tổng số items"""
+  total: Float!
+
+  """Tổng số trang"""
+  totalPages: Float!
+
+  """Có trang trước không"""
+  hasPrevious: Boolean!
+
+  """Có trang sau không"""
+  hasNext: Boolean!
+}
+
+"""Thông tin user trong auth response"""
+type UserType {
+  """ID của user"""
+  id: String!
+
+  """Email của user"""
+  email: String!
+
+  """Tên của user"""
+  name: String
+
+  """Vai trò của user"""
+  role: String!
+
+  """Danh sách quyền"""
+  permissions: [String!]!
+}
+
+"""Response sau khi đăng nhập thành công"""
+type AuthResponse {
+  """Trạng thái thành công của operation"""
+  success: Boolean!
+
+  """Thông báo kết quả"""
+  message: String
+
+  """JWT access token"""
+  access_token: String!
+
+  """JWT refresh token"""
+  refresh_token: String!
+
+  """Thông tin user"""
+  user: UserType!
+}
+
+"""Thông tin người dùng trong hệ thống"""
+type User {
+  id: ID!
+  is_active: Boolean!
+  created_at: String!
+  updated_at: String!
+
+  """Tên đầy đủ của người dùng"""
+  name: String
+
+  """Địa chỉ của người dùng"""
+  address: String
+
+  """Email đăng nhập của người dùng"""
+  email: String!
+
+  """Mật khẩu đã mã hóa (ẩn trong response)"""
+  password: String!
+
+  """Danh sách quyền của người dùng"""
+  permissions: [String!]!
+
+  """Vai trò của người dùng trong hệ thống"""
+  role: String!
+}
+
+"""Response danh sách users với pagination"""
+type UsersResponse {
+  """Trạng thái thành công của operation"""
+  success: Boolean!
+
+  """Thông báo kết quả"""
+  message: String
+
+  """Pagination metadata"""
+  pagination: PaginationInfoDTO!
+
+  """Danh sách users"""
+  data: [User!]!
+}
+
+type Query {
+  """Lấy danh sách users với pagination và filters (admin only)"""
+  usersPaginated(query: UserQueryInput): UsersResponse!
+
+  """Lấy thông tin user theo ID (chỉ của chính mình)"""
+  user: User!
+
+  """Lấy thông tin user theo ID (admin/manager only)"""
+  userById(id: String!): User!
+
+  """Lấy danh sách permissions của user"""
+  findUserPermissions(id: String!): [String!]!
+
+  """Lấy role của user"""
+  findUserRole(id: String!): String!
+}
+
+"""Query parameters cho danh sách user"""
+input UserQueryInput {
+  """Số trang"""
+  page: Float! = 1
+
+  """Số items per page"""
+  limit: Float! = 10
+
+  """Từ khóa tìm kiếm"""
+  search: String
+
+  """Field để sort"""
+  sortBy: String
+
+  """Thứ tự sort"""
+  sortOrder: String! = "DESC"
+
+  """Bộ lọc chi tiết"""
+  filters: UserFilterInput
+}
+
+"""Bộ lọc tìm kiếm user"""
+input UserFilterInput {
+  """Email để filter"""
+  email: String
+
+  """Tên để filter"""
+  name: String
+
+  """Vai trò để filter"""
+  role: String
+
+  """Trạng thái active để filter"""
+  is_active: Boolean
+
+  """Quyền để filter"""
+  permissions: [String!]
+}
+
+type Mutation {
+  """Đăng ký tài khoản mới (public)"""
+  register(createUserInput: CreateUserInput!): User!
+
+  """Tạo user mới (admin only)"""
+  createUser(createUserInput: CreateUserInput!): User!
+
+  """Xóa user (admin only)"""
+  deleteUser(id: String!): User!
+
+  """Cập nhật thông tin user"""
+  updateUserInfo(updateUserInfoInput: UpdateUserInfoInput!): User!
+
+  """Đổi mật khẩu user"""
+  updateUserPassword(updateUserPasswordInput: UpdateUserPasswordInput!): String!
+
+  """Admin đổi mật khẩu cho user khác (admin only)"""
+  adminUpdateUserPassword(adminUpdateUserPasswordInput: AdminUpdateUserPasswordInput!): String!
+  login(input: LoginInput!): AuthResponse!
+  refreshToken(refreshToken: String!): AuthResponse!
+  revokeToken(refreshToken: String!): String!
+}
+
+"""Dữ liệu tạo người dùng mới"""
+input CreateUserInput {
+  """Tên đầy đủ của người dùng"""
+  name: String
+
+  """Địa chỉ của người dùng"""
+  address: String
+
+  """Email đăng nhập của người dùng"""
+  email: String!
+
+  """Mật khẩu đăng nhập"""
+  password: String!
+
+  """Vai trò của người dùng"""
+  role: String! = "USER"
+
+  """Danh sách quyền bổ sung"""
+  permissions: [String!]! = []
+}
+
+"""Dữ liệu cập nhật thông tin người dùng"""
+input UpdateUserInfoInput {
+  """ID của entity"""
+  id: String!
+
+  """Tên đầy đủ của người dùng"""
+  name: String
+
+  """Địa chỉ của người dùng"""
+  address: String
+
+  """Email của người dùng"""
+  email: String!
+
+  """Vai trò của người dùng"""
+  role: String
+
+  """Danh sách quyền"""
+  permissions: [String!]
+}
+
+"""Dữ liệu đổi mật khẩu người dùng"""
+input UpdateUserPasswordInput {
+  """ID của người dùng"""
+  userId: String!
+
+  """Mật khẩu hiện tại"""
+  current_password: String!
+
+  """Mật khẩu mới"""
+  new_password: String!
+}
+
+"""Dữ liệu admin đổi mật khẩu cho user khác"""
+input AdminUpdateUserPasswordInput {
+  """ID của user cần đổi mật khẩu"""
+  userId: String!
+
+  """Mật khẩu mới"""
+  new_password: String!
+}
+
+"""Dữ liệu đăng nhập"""
+input LoginInput {
+  """Email đăng nhập"""
+  email: String!
+
+  """Mật khẩu đăng nhập"""
+  password: String!
+}
