@@ -1,23 +1,30 @@
-import { LayoutProps } from '@/types';
+import { LayoutProps } from "@/types";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
-import './globals.css';
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ['latin', 'vietnamese'],
-  display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter',
-})
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
     default: "Tu Tiên Đọc Truyện - Thế Giới Tiểu Thuyết Tu Tiên",
-    template: "%s | Tu Tiên Đọc Truyện"
+    template: "%s | Tu Tiên Đọc Truyện",
   },
-  description: "Khám phá thế giới tu tiên với hàng ngàn tiểu thuyết hấp dẫn. Đọc truyện online miễn phí với giao diện đẹp mắt và trải nghiệm tuyệt vời.",
-  keywords: ["truyện tu tiên", "tiểu thuyết", "đọc truyện online", "xianxia", "cultivation"],
+  description:
+    "Khám phá thế giới tu tiên với hàng ngàn tiểu thuyết hấp dẫn. Đọc truyện online miễn phí với giao diện đẹp mắt và trải nghiệm tuyệt vời.",
+  keywords: [
+    "truyện tu tiên",
+    "tiểu thuyết",
+    "đọc truyện online",
+    "xianxia",
+    "cultivation",
+  ],
   authors: [{ name: "Tu Tiên Team" }],
   creator: "Tu Tiên Đọc Truyện",
   publisher: "Tu Tiên Đọc Truyện",
@@ -26,7 +33,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://tu-tien-doc-truyen.com'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://tu-tien-doc-truyen.com"
+  ),
   alternates: {
     canonical: "/",
   },
@@ -48,30 +57,28 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#22c55e' },
-    { media: '(prefers-color-scheme: dark)', color: '#059669' },
+    { media: "(prefers-color-scheme: light)", color: "#22c55e" },
+    { media: "(prefers-color-scheme: dark)", color: "#059669" },
   ],
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-}
+};
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="vi" className={inter.variable}>
-      <body className={`${inter.className} antialiased min-h-screen bg-gradient-to-br from-slate-50 to-jade-50 dark:from-slate-900 dark:to-slate-800`}>
-        {children}
-      </body>
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 }
