@@ -1,5 +1,6 @@
 "use client";
 
+import A from "@/components/a copy";
 import A10 from "@/components/a copy 10";
 import A11 from "@/components/a copy 11";
 import A13 from "@/components/a copy 13";
@@ -11,7 +12,7 @@ import A9 from "@/components/a copy 9";
 export default function HomePage() {
   return (
     <div className="wrap">
-      {/* <A /> */}
+      <A />
       {/* <A2 /> */}
       {/* <A3 /> */}
       {/* <A4 /> */}
