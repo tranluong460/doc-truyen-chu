@@ -1,0 +1,174 @@
+:root .free-blue-btn {
+  /* background-image: url(../../../../images/blue_btn_2x.c799a..png); */
+}
+
+.qd-checkbox {
+  /* background: url(../../../../images/qd_checkbox.6bc20..png) no-repeat; */
+  height: 12px;
+  vertical-align: middle;
+  width: 12px;
+}
+
+.lbf-checkbox {
+  /* background: url(../../../../images/qd_checkbox.6bc20..png) no-repeat; */
+  display: inline-block;
+  height: 12px;
+  vertical-align: middle;
+  width: 12px;
+}
+
+.lbf-radio {
+  /* background: url(../../../../images/qd_radio.56d5e..png) no-repeat; */
+  background-position: 0 -24px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 12px;
+  margin-right: 8px;
+  position: relative;
+  vertical-align: -1px;
+  width: 12px;
+}
+
+.op-tag {
+  /* background: url(../../../../images/op_tag.af5b1..png) no-repeat; */
+  bottom: 4px;
+  height: 14px;
+  position: absolute;
+  right: 4px;
+  width: 24px;
+  z-index: 5;
+}
+
+.pin-nav-wrap .nav-list li.site a.pin-logo {
+  /* background-image: url(../../../../images/pin_logo_1x.3f96a..png); */
+  background-position: 10px 48%;
+  background-repeat: no-repeat;
+  display: block;
+  height: 42px;
+  width: 95px;
+}
+
+.classify-list dd a cite .rec {
+  /* background: url(../../../../images/rec.d59f7..png) no-repeat; */
+  display: inline-block;
+  height: 10px;
+  margin-left: 3px;
+  margin-top: -4px;
+  vertical-align: middle;
+  width: 8px;
+}
+
+.popup-wrap .close-popup {
+  /* background: url(../../../../images/btn_close.969cd..png) no-repeat; */
+  height: 36px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 36px;
+}
+
+.logo-wrap .logo a {
+  /* background: url(../../../../images/logo.29766..png) no-repeat; */
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.main-nav li.web .game-dropdown .web-list dd h3 span {
+  /* background: url(../../../../images/tag.4318d..png) no-repeat 0 -12px; */
+  float: right;
+  height: 12px;
+  margin-top: 3px;
+  width: 22px;
+}
+
+.main-nav li.phone .game-dropdown .phone-list dd span {
+  /* background: url(../../../../images/tag.4318d..png) no-repeat 0 -12px; */
+  float: left;
+  height: 12px;
+  margin-top: 3px;
+  width: 22px;
+}
+
+.footer .safety-img a {
+  /* background-image: url(../../../../images/foot_site.4997d..png); */
+  border: 1px solid #ededed;
+  height: 52px;
+  margin-right: 14px;
+  width: 140px;
+}
+
+.focus-wrap .focus-box .focus-img li {
+  /* background: url(../../../../images/focus_img_bg.e52ab..png) no-repeat 50%; */
+  float: left;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: box-shadow 0.5s;
+  width: 33.33%;
+  z-index: 1;
+}
+
+.index-two-wrap .book-list-wrap .book-list li strong .hot {
+  /* background: url(../../../../images/tag.4318d..png) 0 -24px no-repeat; */
+  height: 9px;
+  position: absolute;
+  right: -20px;
+  top: 2px;
+  width: 17px;
+}
+
+.hot-classify-wrap h3.wrap-title .icon-tag {
+  /* background-image: url(../../../../images/hot-classify-tag_1x.eec7b..png); */
+  overflow: hidden;
+  position: absolute;
+  right: -1px;
+  top: -10px;
+}
+
+.update-wrap .update-list-wrap .update-list table td .vip {
+  /* background: url(../../../../images/tag.4318d..png) no-repeat 0 0; */
+  float: left;
+  height: 12px;
+  margin-top: 9px;
+  width: 21px;
+}
+
+.time-limit-wrap li .free-blue-btn {
+  /* background-image: url(../../../../images/blue_btn.f2f34..png); */
+  margin: 0 auto;
+}
+
+.free-blue-btn {
+  /* background-image: url(../../../../images/blue_btn.f2f34..png); */
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #3f5a93;
+  display: block;
+  font: 14px/29px PingFangSC-Regular, -apple-system, Simsun;
+  height: 28px;
+  overflow: hidden;
+  text-align: center;
+  width: 88px;
+}
+
+.survey-btn {
+  /* background: url(../../../../images/diaocha.378b5..png) no-repeat 0 -136px; */
+  bottom: 30px;
+  height: 94px;
+  left: 0;
+  position: fixed;
+  width: 30px;
+  z-index: 21;
+}
+
+.survey-wrap .survey-box p {
+  /* background-image: url(../../../../images/diaocha.378b5..png); */
+  background-position: 0 0;
+  height: 136px;
+  margin: 0 auto;
+  width: 925px;
+}

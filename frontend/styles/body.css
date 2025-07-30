@@ -1,0 +1,146 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  background: #fff;
+  color: #262626;
+  font-family: PingFangSC-Regular, HelveticaNeue-Light, Helvetica Neue Light,
+    Microsoft YaHei, "sans-serif";
+  text-align: left;
+}
+
+body.theme-6 .all-download-panel {
+  background-color: #191919;
+  border: 1px solid #444;
+  box-sizing: border-box;
+}
+
+body.theme-6 .all-download-panel.show-panel {
+  background-color: transparent;
+  border: none;
+}
+
+body.theme-6 .all-download-panel:before {
+  border-color: #444 transparent transparent;
+  bottom: -8px;
+}
+
+body.theme-6 .all-download-panel:after {
+  border-color: #191919 transparent transparent;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  bottom: -7px;
+  content: "";
+  left: 50%;
+  margin-left: -8px;
+  position: absolute;
+  top: auto;
+}
+
+body.theme-6 .all-download-panel .title {
+  color: #666;
+}
+
+body.theme-6 .icon-ddl .nav-listen .icon-listen {
+  background-image: url(https://imgservices-1252317822.image.myqcloud.com/coco/s05192023/afbfeafe.m5hgkr.svg);
+}
+
+body.black-white-ie11 .banner-item a:after,
+body.black-white-ie11 .banner-wrap a:after,
+body.black-white-ie11 .book-img a:after,
+body.black-white-ie11 .focus-img a:after,
+body.black-white-ie11 .lbf-slides li a:after,
+body.black-white-ie11 .notice-banner a:after,
+body.black-white-ie11 .photo a:after,
+body.black-white-ie11 .roundabout-moveable-item a:after,
+body.black-white-ie11 .top-game-op a + a:after {
+  background: hsla(0, 0%, 49%, 0.7);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+body.black-white-ie11 .book-cover .link:after {
+  bottom: 5px;
+}
+
+body.black-white-ie11 .book-cover .link:after,
+body.black-white-ie11 .slideItem a:after {
+  background: hsla(0, 0%, 49%, 0.7);
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+body.black-white-ie11 .slideItem a:after {
+  bottom: 8px;
+}
+
+body.black-white-ie11 .photo a:after {
+  border-radius: 100%;
+}
+
+body.black-white-ie11 .logo:after {
+  background: hsla(0, 0%, 49%, 0.7);
+  border-radius: 15px;
+  content: "";
+  height: 55px;
+  left: 0;
+  position: absolute;
+  top: 14px;
+  width: 55px;
+  z-index: 5;
+}
+
+body.black-white-ie11
+  .focus-wrap
+  .focus-box
+  .focus-slider
+  .lbf-slides
+  .thumb
+  a.active {
+  background: #666;
+}
+
+body.spring .home-top-picture {
+  background-image: url(https://imgservices-1252317822.image.myqcloud.com/image/20200115/queg3e7smf.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 84px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1600px;
+  z-index: -1;
+}
+
+body.spring .home-picture-wrap {
+  position: relative;
+}
+
+body.spring .home-picture-wrap .home-picture-img {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+  position: absolute;
+  top: -10px;
+  width: 202px;
+  z-index: 1;
+}
+
+body.spring .home-picture-wrap .home-picture-img.left {
+  background-image: url(https://imgservices-1252317822.image.myqcloud.com/image/20200115/12nmc38ohd.png);
+  left: -202px;
+}
+
+body.spring .home-picture-wrap .home-picture-img.right {
+  background-image: url(https://imgservices-1252317822.image.myqcloud.com/image/20200115/fpvbvo7b2p.png);
+  right: -202px;
+}
